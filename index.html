@@ -1,19 +1,36 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <link href="./styles.css" rel="stylesheet">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+<html> 
+<Head> 
+<Title>Frame</Title> 
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-  </body>
-</html>
+<style> 
+	body { 
+		background-image: url(Assets/Img/Vaticon.png); 
+		background-repeat: no-repeat; 
+		background-size: cover; 
+		/* By default, the image will be completely zoomed-in 
+		and will be repeating vertically and horizontally, 
+		therefore, we've used no-repeat to stop repetition 
+		and to fit the image on screen we've used 'cover' value, 
+		which will cut or stretch the image to fit it on entire screen */ 
+	} 
+
+	h1 { 
+		background-color: #ffffff; 
+	} 
+</style> 
+
+</head> 
+
+
+<Frameset cols="30%,*"> 
+<frame src="Index1.html" name="fr1"> 
+<frame src="Index2.html" name="fr2"> 
+<frame src="Latihan3.html" name="fr3"> 
+<frame src="Latihan4.html" name="fr4"> 
+<frame src="Latihan5.html" name="fr5"> 
+<frame src="Latihan6.html" name="fr6"> 
+<frame src="Latihan7.html" name="fr7"> 
+<frame src="Latihan8.html" name="fr8"> 
+</frameset> 
+</html> 

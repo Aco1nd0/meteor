@@ -1,2 +1,2 @@
-# star
+# meteor
 Comet

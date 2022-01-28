@@ -24,49 +24,11 @@
 </body> 
 	
 	
-	<div class="">
-    <video autoplay="true" id="video-webcam">
-        Izinkan untuk Mengakses Webcam untuk Demo
-    </video>
-    <button onclick="takeSnapshot()">Ambil Gambar</button>
-</div>
-<script>
-    var video = document.querySelector("#video-webcam");
-
-    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
-
-    if (navigator.getUserMedia) {
-        navigator.getUserMedia({ video: true }, handleVideo, videoError);
-    }
-
-    function handleVideo(stream) {
-        video.src = window.URL.createObjectURL(stream);
-        console.log(stream);
-    }
-
-    function videoError(e) {
-        // do something
-        alert("Izinkan menggunakan webcam untuk demo!")
-    }
-
-    function takeSnapshot() {
-        var img = document.createElement('img');
-        var context;
-        var width = video.offsetWidth
-                , height = video.offsetHeight;
-
-        canvas = document.createElement('canvas');
-        canvas.width = width;
-        canvas.height = height;
-
-        context = canvas.getContext('2d');
-        context.drawImage(video, 0, 0, width, height);
-
-        img.src = canvas.toDataURL('image/png');
-        document.body.appendChild(img);
-    }
-
-</script>
+	<iframe height="300" style="width: 100%;" scrolling="no" title="Live Stream your Webcam to HTML page" src="https://codepen.io/dalalRohit/embed/preview/XWXEEPE?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/dalalRohit/pen/XWXEEPE">
+  Live Stream your Webcam to HTML page</a> by Rohit Dalal (<a href="https://codepen.io/dalalRohit">@dalalRohit</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 </html>
 
